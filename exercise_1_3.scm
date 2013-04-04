@@ -1,0 +1,5 @@
+(define (sum-square-max a b c)
+  (define x (if (> a b) a b))
+  (define y (if (< a b) a b))
+  (define z (if (> y c) y c))
+  (+ (* x x) (* z z)))
