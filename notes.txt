@@ -1,0 +1,44 @@
+combinations => expressions that delimit a list of expressions within parentheses in order to denote procedure application.
+  (+ 1 3) to denote the execution of the operator '+'' to the operands '1' and '3'
+
+prefix notation => the operator is placed to the left of the operands.
+
+'define' => used to assign a value to a variable => (define size 2)
+
+Compound Procedures
+
+  (define ({name} {formal parameters}) {body})
+
+  Example: defining a square procedure that returns the square of a number
+
+  (define (square x) (* x x))
+
+
+  composing procedures:
+
+  We can create a new procedure that is composed based on the square procedure that we just defined:
+
+  Example: we want a procedure to calculate x^2 + y^2
+  (define (sum-of-squares x y)
+    (+ (square x) (square y)))
+
+  (sum-of-squares 3 4)
+  => 25
+
+Expression Evaluation:
+
+Substitution Model:
+  the operator and all the operands are evaluated at each node of the expression tree and then the evaluated procedure is applied to the evaluated arguments.
+
+
+
+  Normal-Order evaluation:
+    lazy evaluate the operands, doing it only the expression is reduced to an expression composed of only primitive operators.
+
+  Applicative-order evaluation:
+    Evaluate the arguments and then apply the procedure.
+
+    
+
+
+
